@@ -1,0 +1,61 @@
+set fenc=utf-8
+
+set tabstop=3
+set shiftwidth=3
+set expandtab
+set autoindent
+set smartindent
+
+set nobackup
+set noswapfile
+set autoread
+set showcmd
+set showmatch
+
+set backspace=indent,eol,start
+
+set t_Co=256
+set background=light
+autocmd ColorScheme * highlight Normal ctermbg=none
+autocmd ColorScheme * highlight NonText ctermbg=none
+autocmd ColorScheme * highlight LineNr ctermbg=none
+colorscheme PaperColor
+
+autocmd FileType c     setlocal sw=3 ts=3 et
+autocmd FileType scala setlocal sw=2 ts=2 et
+autocmd FileType rust  setlocal sw=4 ts=4 et
+
+
+if &compatible
+  set nocompatible               " Be iMproved
+endif
+
+" Required:
+set runtimepath+=~/.vim/dein/repos/github.com/Shougo/dein.vim
+
+" Required:
+if dein#load_state('~/.vim/dein/')
+   call dein#begin('~/.vim/dein/')
+
+   " Let dein manage dein
+   " Required:
+   call dein#add('~/.vim/dein/repos/github.com/Shougo/dein.vim')
+
+   let s:tomld = $HOME . '/.vim/toml'
+   let s:toml  = s:tomld . '/dein.toml'
+
+   call dein#load_toml(s:toml, {'lazy': 0})
+
+   " Required:
+   call dein#end()
+   call dein#save_state()
+endif
+
+" Required:
+filetype plugin indent on
+syntax on
+
+" If you want to install not installed plugins on startup.
+"if dein#check_install()
+"  call dein#install()
+"endif

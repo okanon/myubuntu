@@ -1,0 +1,3 @@
+[[plugins]]
+repo = 'neoclide/coc.nvim'
+build = './install.sh nightly'

@@ -1,0 +1,19 @@
+[Desktop Entry]
+DefaultProfile=ubuntu.profile
+
+[DownloadDialog Settings]
+Height 1440=523
+Width 2560=700
+
+[Favorite Profiles]
+Favorites=
+
+[KonsoleWindow]
+ShowMenuBarByDefault=false
+
+[MainWindow]
+Height 1440=777
+MenuBar=Disabled
+State=AAAA/wAAAAD9AAAAAAAABFYAAAMJAAAABAAAAAQAAAAIAAAACPwAAAAA
+ToolBarsMovable=Disabled
+Width 2560=1110
