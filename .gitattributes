@@ -1,0 +1,2 @@
+src/vimrc linguist-vendored
+src/vim/syntax/* linguist-vendored
