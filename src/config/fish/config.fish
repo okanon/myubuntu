@@ -12,6 +12,8 @@ set PATH $HOME/.cargo/bin $PATH
 set PATH /usr/local/go/bin $PATH
 set GOPATH $HOME/go
 
+set PATH $PATH /usr/local/ios/bin
+
 
 set PIP2 "sudo -H pip2"
 set PIP3 "sudo -H pip3"
