@@ -5,6 +5,7 @@ IPHONEOS_SDK="13.5"
 ARCH="arm64" # armv7s arm64 arm64e
 CWD=$(pwd ../)
 
+
 # check kernel
 if [ $(uname -s) != "Linux" ]; then
    echo "Kernel is not Linux"

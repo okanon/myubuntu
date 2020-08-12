@@ -2,6 +2,7 @@
 
 JOBS=$(($(grep -c ^processor /proc/cpuinfo 2>/dev/null) + 1))
 
+
 # check cmake
 if !(type "cmake" > /dev/null 2>&1); then
    git clone https://github.com/Kitware/CMake && cd CMake
