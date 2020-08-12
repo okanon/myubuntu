@@ -82,7 +82,8 @@ fi
 sudo apt -y install gcc-10 g++-10 gccgo-10 gfortran-10
 sudo apt -y install make automake flex bison zlib1g-dev \
                     z3 libssl-dev libcurl4-openssl-dev \
-                    gettext libncurses-dev liblua5.3-dev
+                    gettext libncurses-dev liblua5.3-dev \
+                    libboost-all-dev libglib2.0-dev
 if [ $(gcc -dumpversion) -ne "10" ]; then
    sudo update-alternatives --install /usr/bin/gcc gcc /usr/bin/gcc-10 100 \
                             --slave /usr/bin/g++ g++ /usr/bin/g++-10 \
