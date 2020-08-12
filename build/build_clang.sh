@@ -13,6 +13,8 @@ if !(type "cmake" > /dev/null 2>&1); then
    if type "cmake" > /dev/null 2>&1; then
       sudo rm -rf CMake
    fi
+
+   sudo ldconfig
 fi
 
 # build llvm-clang
@@ -32,4 +34,6 @@ if !(type "clang" > /dev/null 2>&1); then
    if type "clang" > /dev/null 2>&1; then
       sudo rm -rf llvm-project
    fi
+
+   sudo ldconfig
 fi

@@ -3,7 +3,7 @@
 TRIPLE="arm-apple-darwin11"
 IPHONEOS_SDK="13.5"
 ARCH="arm64" # armv7s arm64 arm64e
-
+CWD=$(pwd ../)
 
 # check kernel
 if [ $(uname -s) != "Linux" ]; then
@@ -59,6 +59,11 @@ if !(type "arm-apple-darwin11-clang" > /dev/null 2>&1); then
 
          if [ ! -e /usr/local/ios ]; then
             sudo cp -rf target /usr/local/ios
+         fi
+
+         if [ ! -e /etc/ld.so.conf.d/arm-darwin.conf ]; then
+            sudo cp -f $CWD/src/ld.so.conf.d/arm-darwin.conf /etc/ld.so.conf.d/
+            sudo ldconfig
          fi
       fi
    fi
