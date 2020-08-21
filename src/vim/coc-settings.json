@@ -1,4 +1,9 @@
 {
+  "diagnostic.warningSign": ">>",
+  "suggest.labelMaxLength": 60,
+  "suggest.detailMaxLength": 0,
+  "suggest.disableKind": false,
+  "suggest.disableMenu": true,
   "languageserver": {
     "rust": {
       "command": "rustup",
