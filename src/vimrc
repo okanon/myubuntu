@@ -1,3 +1,4 @@
+
 set fenc=utf-8
 
 set tabstop=3
@@ -14,17 +15,25 @@ set showmatch
 
 set backspace=indent,eol,start
 
+set modifiable
+set write
+
 set t_Co=256
 set background=light
 autocmd ColorScheme * highlight Normal ctermbg=none
 autocmd ColorScheme * highlight NonText ctermbg=none
 autocmd ColorScheme * highlight LineNr ctermbg=none
+
+autocmd ColorScheme * highlight CocErrorSign ctermfg=203 ctermbg=None
+autocmd ColorScheme * highlight SignColumn ctermbg=None
 colorscheme PaperColor
 
 autocmd FileType c     setlocal sw=3 ts=3 et
-autocmd FileType scala setlocal sw=2 ts=2 et
+autocmd FileType scala setlocal sw=2 ts=2 et expandtab
 autocmd FileType rust  setlocal sw=4 ts=4 et
 
+nmap <silent> gd <Plug>(coc-definition)
+nmap <silent> tp <Plug>(coc-type-definition)
 
 if &compatible
   set nocompatible               " Be iMproved

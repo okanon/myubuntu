@@ -168,16 +168,17 @@ if [ ! -e ~/.vim ]; then
    cp src/vim/toml/dein.toml ~/.vim/toml/
 
    # install metals-vim
-   curl -Lo coursier https://git.io/coursier-cli-linux && chmod +x
-   coursier bootstrap --java-opt -Xss4m \
-                      --java-opt -Xms100m \
+   curl -Lo coursier https://git.io/coursier-cli-linux && chmod +x coursier
+   ./coursier bootstrap --java-opt -Xss6m \
+                      --java-opt -Xms200m \
                       --java-opt -Dmetals.client=vim-lsc \
-                      org.scalameta:metals_2.12:0.9.0 \
+                      org.scalameta:metals_2.12:0.9.3 \
                       -r bintray:scalacenter/releases \
                       -r sonatype:snapshots \
                       -o /usr/local/bin/metals-vim -f
+   rm -rf coursier
    # required coc-java coc-metals
-   # (coc-java coc-metals coc-python coc-json coc-tsserver)
+   # (coc-java coc-python coc-json coc-tsserver)
    cp src/vim/coc-settings.json ~/.vim
 
    # install jedi & pyls
