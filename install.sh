@@ -7,7 +7,7 @@ sudo apt -y upgrade
 sudo apt -y install tree net-tools git vim curl fish \
                     neofetch openssh-server speedtest-cli \
                     psensor ffmpeg mysql-server ddclient \
-                    subversion
+                    subversion expect
                     
 # ssh config
 if [ ! -e ~/.ssh ]; then
@@ -31,6 +31,9 @@ if [ $DESKTOP_SESSION = "plasma" ]; then #KDE
       sudo cp src/local/share/konsole/Lisa.colorscheme /usr/share/konsole
       cp src/config/konsolerc $HOME/.config/
    fi
+
+   # install network-manager(openvpn)
+   sudo apt -y install network-manager-openvpn network-manager-l2tp
    
    # install KDE themes
    sudo apt -y install latte-dock
